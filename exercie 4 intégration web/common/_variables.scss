@@ -1,0 +1,11 @@
+$fonts : (
+    poppins : "Poppins",
+    island : "Island Moments"
+);
+
+@each $key, $value in $fonts{
+    .font-#{$key} {
+        font-family: $value, sans-serif;
+    }
+}
+

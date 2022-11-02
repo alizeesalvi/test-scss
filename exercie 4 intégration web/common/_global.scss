@@ -1,0 +1,37 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+.logo {
+    width: 50px;
+}
+
+a {text-decoration: none;}
+
+img {
+    width: 90%;
+}
+
+.img1 {
+    @include tablette-only{
+        margin-bottom: 40px;
+    }
+}
+
+.section {
+    display: flex;
+
+    @include mobile-only{
+        flex-wrap: wrap;
+    }
+    
+}
+
+.paragraphe1{flex-basis: 50%;}
+
+.paragraphe2{flex-basis: 50%;}
+

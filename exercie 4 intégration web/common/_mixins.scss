@@ -1,0 +1,24 @@
+@mixin custom-shadow{
+    box-shadow: rgba(24, 26, 29, 0.4) 0px 8px 24px;
+}
+
+.shadow {
+    @include custom-shadow;
+}
+
+$breakpoints : (
+    tablette: 1100px,
+    mobile : 767px
+);
+
+@mixin tablette-only {
+    @media screen and (max-width: map-get($breakpoints, tablette)){
+        @content;
+    }
+}
+
+@mixin mobile-only {
+    @media screen and (max-width: map-get($breakpoints, mobile)){
+        @content;
+    }
+}
